@@ -29,3 +29,69 @@
 - search() returns the first index of the first match of the given string also accepts regex for searching
 - lastIndexOf() returns a last finded index of the character in string
 - localCompare() returns 
+
+
+
+
+## Questions: 
+- Write a function that takes a string as input and returns the string with each word reversed, but the order of words should remain the same.
+#### Code :
+``` javascript
+const str = 'hello world';
+
+const reverseString = (a) => {
+    let array = a.split("").reverse();
+    return array.toString().replaceAll(",","")
+}
+console.log(reverseString(str))
+```
+- Check for palindrome
+#### Code:
+``` javascript
+const check = (e) => {
+    let array = e.split("").reverse();
+    let reversedStr = array.toString().replaceAll(",","");
+    
+    if(reversedStr === e) {
+        console.log("hello");
+    }else {
+        console.log("mello");
+    }
+}
+check("   ")
+```
+
+- Write a function that capitalizes only the first letter of a given string.
+#### Code: 
+``` javascript
+let str = "dhjfkhfsd";
+console.log(str[0].toUpperCase() + str.slice(1, str.length));
+```
+
+- Write a function that convert camelCase into snake_case
+#### Code :
+``` javascript
+const convert = (e) => {
+    let snakeCase = "";
+
+    e.split("").forEach((char) => {
+        if (char === char.toUpperCase() && char !== " ") {
+            snakeCase += "_" + char.toLowerCase(); 
+        } else {
+            snakeCase += char;
+        }
+    });
+
+    console.log(snakeCase);
+};
+
+convert("helloWorld Case world hgjfdhgj ");
+```
+- Write a function that extracts file extension from file name
+#### Code :
+```javascript
+const extract = (e) => {
+    return "." + e.split(".")[1]
+}
+console.log(extract("index.html"));
+```
