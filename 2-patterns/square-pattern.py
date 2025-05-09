@@ -1,12 +1,4 @@
-n = 3
-spaces = 0
 
-for i in range(0,n):
-    string = ""
-    for j in range(0,n):
-        string += " "*spaces + str(i)
-        
-    print(string)    
 # ___Floyd's triangle patterns (very important)
 """
 1,
